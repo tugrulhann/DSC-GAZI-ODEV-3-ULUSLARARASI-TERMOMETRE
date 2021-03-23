@@ -1,0 +1,33 @@
+#include <LiquidCrystal.h>
+
+#include <dht11.h>
+LiquidCrystal lcd(12,11,6,5,4,3);
+
+int DHT11_pin=2; 
+dht11 DHT11_sensor; 
+void setup(){
+lcd.begin(16,2);
+
+}
+void loop(){
+
+int chk = DHT11_sensor.read(DHT11_pin);
+
+lcd.setCursor(0,0);
+lcd.print("Temp:");
+lcd.setCursor(5,0);
+lcd.print((float)DHT11_sensor.kelvin());  
+lcd.print("K  "); 
+
+lcd.print((float)DHT11_sensor.fahrenheit());  
+lcd.print("F"); 
+
+lcd.setCursor(0,1);
+lcd.print("Humidity:");
+lcd.setCursor(9,1);
+lcd.print((float)DHT11_sensor.humidity);  
+lcd.print("%");
+lcd.scrollDisplayLeft();
+
+delay(500);
+}
