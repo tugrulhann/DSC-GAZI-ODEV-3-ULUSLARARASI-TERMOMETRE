@@ -8,7 +8,7 @@ Onur Bey, uluslararası bir şirketin yöneticisidir. Şirkete her ülkeden insa
 Neler Olmalı?
 
 •	DHT11 sensörünü kullanmalısınız
-.
+
 •	Her sıcaklık değeri ve nem miktarı ekrana yazdırılmalıdır.
 
 •	Her değerin hangi termometreye ait olduğunu sıcaklık değeri ile birlikte yazdırılmalıdır.
